@@ -1,0 +1,17 @@
+
+  .button1 {
+    position:absolute;
+    width:8%;
+    height:5%;
+    left:90%;
+    top:9%;
+    background-color: rgb(51,0,68) ;
+    color: rgb( 247 , 241 , 237);
+    border: 2px solid rgb( 247 , 241 , 237);
+    border-radius: 0.5em;
+  }
+  .button1:hover {
+    background-color: rgb(147, 147, 255);
+    color: rgb(0,0,68);
+    border: 2px solid rgb(147, 147, 255);
+  }

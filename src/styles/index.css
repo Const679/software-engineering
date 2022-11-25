@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Cambria' ;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb( 247 , 241 , 237);
+}
+
+@font-face {
+  font-family: 'MyFont';
+  src: local('Made Tommy Bold'), url(../fonts/made_tommy/MADE_TOMMY_Bold_Outline_PERSONAL_USE.otf) format('otf');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.h1{
+  font-family: 'Made Tommy Bold';
+}
+.button {
+  /* Green */
+ border: none;
+ padding: 16px 32px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 18px;
+ font-family: 'Cambria';
+ margin: 4px 2px;
+ transition-duration: 0.4s;
+ cursor: pointer;
+ border-radius: 0.5em;
+}
