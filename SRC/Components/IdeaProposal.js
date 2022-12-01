@@ -4,40 +4,44 @@ import '../styles/IdeaProposal.css'
 import { type } from '@testing-library/user-event/dist/type';
 
 function Main(){
-    type="none";
+    // selecting radio button
+    const buttons = document.querySelectorAll("input[type='radio']");
+
+    // adding event to all radio buttons
+    buttons.forEach(button => {
+    button.onclick = () => {
+        if (button.checked) {
+            <StoryInfo types={button.value}/>
+        }
+    }
+    })
     return(
-    <div id="menu">
-        <div id="Type" className='Type'>
+        <div className='Type'>
             <h2>Partager votre histoire</h2>
 
-            <form action="StoryInfo type={type}" method="post">
+            <form action="./InfoStory.js" method="post">
                 <p>
-                    <input type="radio" id="Book" name="story" value="Book" onclick="type=='Book'"/>
-                    <label for="Book">Un livre existant</label>
+                    <input type="radio" id="Book" name="story" value="Book" />
+                    <label htmlFor="Book">Un livre existant</label>
                 </p>
                 <p>
-                    <input type="radio" id="Webtoon" name="story" value="Webtoon" onclick={type=="Webtoon"}/>
-                    <label for="Webtoon">Un Webtoon</label>
+                    <input type="radio" id="Webtoon" name="story" value="Webtoon" onClick="StoryInfo types='Webtoon')"/>
+                    <label htmlFor="Webtoon">Un Webtoon</label>
                 </p>
                 <p>
-                    <input type="radio" id="Wattpad" name="story" value="Wattpad" onclick={type=="Wattpad"}/>
-                    <label for="Webtoon">Un Wattpad</label>
+                    <input type="radio" id="Wattpad" name="story" value="Wattpad" onClick="StoryInfo types='Wattpad'"/>
+                    <label htmlFor="Webtoon">Un Wattpad</label>
                 </p>
                 <p>
-                    <input type="radio" id="scenario" name="story" value="scenario" onclick={type=="scenario"}/>
-                    <label for="scenario">Un scénario original</label>
+                    <input type="radio" id="scenario" name="story" value="scenario" onClick="StoryInfo types='scenario'"/>
+                    <label htmlFor="scenario">Un scénario original</label>
                 </p>
                 <p>
-                    <input type="radio" id="synopsy" name="story" value="synopsy" onclick={type=="synopsy"}/>
-                    <label for="synopsy">Un synopsy original</label>
+                    <input type="radio" id="synopsy" name="story" value="synopsy" onClick="StoryInfo types='synospy'"/>
+                    <label htmlFor="synopsy">Un synopsy original</label>
                 </p>
             </form>
         </div>
-        <div id="Info">
-            <StoryInfo type={type} />
-            {type}
-        </div>
-    </div>
     )
 }
 export default Main
