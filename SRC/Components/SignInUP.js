@@ -1,16 +1,12 @@
 import Inscription from './Inscription'
 import Connexion from './Connexion'
+import React from 'react'
+import '../styles/SignInUp.css'
 
 function Main(){
     return(
     <div id="Inscription">
-        <div id="menu">
             <Inscription/>
-        </div>
-
-        <div id="Connexion">
-            <Connexion/>
-        </div>
     </div>
     )
 }
